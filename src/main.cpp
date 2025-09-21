@@ -45,6 +45,8 @@ int main() {
     while (!WindowShouldClose()) {
         BeginDrawing();
 
+        if (IsKeyPressed(KEY_SPACE)) isDarkTheme = !isDarkTheme;
+
         // Shorthands
         const Rectangle screen    = {0.0f, 0.0f, (float)GetScreenWidth(), (float)GetScreenHeight()};
         const Vector2   mouse     = GetMousePosition();
